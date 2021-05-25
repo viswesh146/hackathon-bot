@@ -1,0 +1,77 @@
+version: "2.0"
+nlu:
+  - regex: valid_domain
+    examples: |
+      - (?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\.)+[a-zA-Z]{2,63}$)
+
+  - intent: know_website
+    examples: |
+      - tell me about [domain]{"entity": "user_domain"} website
+      - tell me about [domain]{"entity": "user_domain"} domain
+      - find domain details of [domain]{"entity": "user_domain"}
+
+  - intent: know_cyence_score
+    examples: |
+      - what's the cyence score of [google.com]{"entity": "user_domain", "value": "google.com"}
+      - cyence score of [yahoo.com]{"entity": "user_domain", "value": "yahoo.com"}
+      - cyence score of domain [cyence.net]{"entity": "user_domain", "value": "cyence.net"}
+      - cyence score of website [cyence.net]{"entity": "user_domain", "value": "cyence.net"}
+      - insurance score of domain [cyence.net]{"entity": "user_domain", "value": "cyence.net"}
+      - insurance score of website [cyence.net]{"entity": "user_domain", "value": "cyence.net"}
+
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - how are you
+      - good morning
+      - good evening
+      - hey
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - ciao
+
+  - intent: thankyou
+    examples: |
+      - thanks
+      - thank you
+      - thanks friend
+
+  - intent: search_concerts
+    examples: |
+      - Find me some good concerts
+      - Show me concerts
+      - search concerts
+
+  - intent: search_venues
+    examples: |
+      - Find me some good venues
+      - Show me venues
+      - search venues
+
+  - intent: compare_reviews
+    examples: |
+      - compare reviews
+      - show me a comparison of the reviews
+
+  - intent: how_to_get_started
+    examples: |
+      - how do I get started
+      - what can I do
+      - start
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - yep
+
+  - intent: deny
+    examples: |
+      - nope
+      - no
+      - absolutely not
+  
