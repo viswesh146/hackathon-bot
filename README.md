@@ -1,4 +1,6 @@
-# Concertbot
+# CyenceBot
+
+## Someoe suggest a cool name please :)
 
 Example bot that contains only story data.
 
